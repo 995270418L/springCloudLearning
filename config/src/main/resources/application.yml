@@ -1,0 +1,30 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/995270418L/springconfigserver/
+          #仓库中的配置文件会被转换成web接口，访问可以参照以下的规则：
+
+           #/{application}/{profile}[/{label}]
+           #/{application}-{profile}.yml
+           #/{label}/{application}-{profile}.yml
+           #/{application}-{profile}.properties
+           #/{label}/{application}-{profile}.properties
+           #以neo-config-dev.properties为例子，它的application是neo-config，profile是dev。client会根据填写的参数来选择读取对应的配置。
+          search-paths: /config
+
+          username: 995270418L
+          password: 1996525123Lxh
+          # svn作为配置中心 的配置，需要显示声明subversion
+#        svn:
+#          uri:
+#          username:
+#          password:
+#          default-label: trunk
+#    profiles:
+#      active: subversion

@@ -1,0 +1,8 @@
+#为什么要把配置文件中心仓库的地址放在这里，是因为这个文件的加载顺序早于application.yml
+spring:
+  cloud:
+    config:
+      name: config # 对应{application}
+      profile: dev # 对应{profile}
+      uri: http://localhost:8040 # 访问config-server项目的地址
+      label: master #对应git的分支。如果配置中心使用的是本地存储，则该参数无用

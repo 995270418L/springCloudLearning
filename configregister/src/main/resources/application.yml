@@ -1,0 +1,17 @@
+server:
+  port: 8060
+spring:
+  application:
+    name: config-register-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/995270418L/springconfigserver/
+          search-paths: /config
+          username: 995270418L
+          password: 1996525123Lxh
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/

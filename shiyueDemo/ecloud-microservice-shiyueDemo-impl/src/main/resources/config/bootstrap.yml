@@ -1,0 +1,66 @@
+management:
+    security:
+        roles: ADMIN
+    context-path: /management
+    health:
+        mail:
+            enabled: false # When using the MailService, configure an SMTP server and set this to true
+
+security:
+    basic:
+        enabled: false
+
+server:
+    session:
+        cookie:
+            http-only: true
+
+info:
+    project:
+        version: 0.0.1-SNAPSHOT
+
+spring:
+    jackson:
+        serialization.indent_output: true
+        serialization.write_dates_as_timestamps: false
+    messages:
+        basename: i18n/messages
+        cache-seconds: 1
+    mvc:
+        favicon:
+            enabled: false
+    thymeleaf:
+        mode: XHTML
+    tx:
+        advice:
+          enabled: true
+
+
+ecloud:
+    async:
+        core-pool-size: 2
+        max-pool-size: 50
+        queue-capacity: 10000
+    mail:
+        from: api@localhost
+    swagger:
+        default-include-pattern: /api/shiyueDemo/.*
+        title: api API
+        description: api API documentation
+        version: 0.0.1
+        terms-of-service-url:
+        contact-name:
+        contact-url:
+        contact-email:
+        license:
+        license-url:
+    ribbon:
+        display-on-active-profiles: dev
+
+
+springfox:
+    documentation:
+        swagger:
+            v2:
+                path: /api/shiyueDemo/api-docs
+debug: true

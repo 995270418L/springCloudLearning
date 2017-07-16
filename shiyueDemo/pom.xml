@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>ecloud-framework-parent</artifactId>
+        <groupId>com.shiyuesoft.framework</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>ecloud-microservice-shiyueDemo</artifactId>
+    <packaging>pom</packaging>
+    <name>ecloud-microservice-shiyueDemo</name>
+
+    <prerequisites>
+        <maven>${maven.version}</maven>
+    </prerequisites>
+
+    <properties>
+        <!-- Build properties -->
+        <java.version>1.8</java.version>
+        <maven.version>3.0.0</maven.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+        <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m</argLine>
+    </properties>
+
+    <modules>
+        <module>ecloud-microservice-shiyueDemo-api</module>
+        <module>ecloud-microservice-shiyueDemo-impl</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.4.4</version>
+        </dependency>
+    </dependencies>
+</project>

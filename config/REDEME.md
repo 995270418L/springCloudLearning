@@ -1,0 +1,2 @@
+这个是单独的config服务端文件
+没有注册到eureka-server中的，造成的问题就是config-server端和config-client端高度耦合。

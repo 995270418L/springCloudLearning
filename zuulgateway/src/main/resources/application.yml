@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: zuul
+server:
+  port: 8090
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+      # 配置zuul路由信息，我们使用zuul的默认配置
+      #默认情况下，Zuul会代理所有注册到Eureka Server的微服务，并且Zuul的路由规则如下：http://ZUUL_HOST:ZUUL_PORT/
+      #微服务在Eureka上的serviceId/**会被转发到serviceId(spring.application.name)对应的微服务。
+#zuul:
+#  routes:
+#    api-a:
+#      path: /producer/**
+#      service-id: person

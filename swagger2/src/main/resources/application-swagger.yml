@@ -1,0 +1,6 @@
+swagger:
+  enable: true
+  package-scan: demo.springboot
+  title: Controller restful API
+  description: Controller Restful API
+  version: 3.0

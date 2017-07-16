@@ -1,0 +1,13 @@
+management:
+  security:
+    enabled: false #刷新时，关闭安全验证
+spring:
+  cloud:
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host:
+    port: 5672
+    username: admin
+    password: 123123

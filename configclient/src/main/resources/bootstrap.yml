@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+spring:
+   cloud:
+      config:
+        name: config #{application}
+        profile: dev
+        label: master
+        discovery:
+          enabled: true  #开启注册中心
+          service-id: config-register-server  #指定调用服务的id
